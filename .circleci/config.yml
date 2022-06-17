@@ -11,4 +11,4 @@ jobs:
       #- run: python test_calculations.py
       #- run: echo "this is the test job"
       #- run: python ~/projects/CItest/test_calculations.py
-      - run: python /home/vagrant/projects/CItest/test_calculations.py
+      - run: echo /home/vagrant/projects/CItest/test_calculations.py
