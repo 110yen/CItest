@@ -1,14 +1,15 @@
 version: 2
 jobs:
   build:
-    #working_directoyr: ~/projects/CItest
     docker:
       - image: circleci/python:3.6
     steps:
       # ソースコードのチェックアウト
       - checkout
-      # unittestコマンドの実行
-      - run: python test_calculations.py
-      #- run: echo "this is the test job"
-      #- run: python ~/projects/CItest/test_calculations.py
-      #- run: python /home/vagrant/projects/CItest/test_calculations.py
+      - run: |
+          python3 -m venv venv
+          source ./venv/bin/activate
+          pip install pytest
+          pytest test_calculations.py --junit-xml=test-results/pytest.xml
+      - store_test_results:
+          path: test-results
