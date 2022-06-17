@@ -7,4 +7,5 @@ jobs:
       # ソースコードのチェックアウト
       - checkout
       # unittestコマンドの実行
-      - run: python3.6 test_calculations.py
+      #- run: python test_calculations.py
+      - run: echo "this is the test job"
