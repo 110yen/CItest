@@ -1,6 +1,7 @@
 version: 2
 jobs:
   build:
+    working_directoyr: ~/projects/CItest
     docker:
       - image: circleci/python:3.6
     steps:
@@ -9,5 +10,5 @@ jobs:
       # unittestコマンドの実行
       #- run: python test_calculations.py
       #- run: echo "this is the test job"
-      - run: python3 test_calculations.py
+      - run: python test_calculations.py
 
