@@ -7,4 +7,4 @@ jobs:
       # ソースコードのチェックアウト
       - checkout
       # unittestコマンドの実行
-      - run: python test_calculations.py
+      - run: python ./test_calculations.py
