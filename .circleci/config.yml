@@ -8,4 +8,6 @@ jobs:
       - checkout
       # unittestコマンドの実行
       #- run: python test_calculations.py
-      - run: echo "this is the test job"
+      #- run: echo "this is the test job"
+      -run: python test_calculations.py
+
